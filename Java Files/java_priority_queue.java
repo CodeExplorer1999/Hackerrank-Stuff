@@ -49,7 +49,7 @@ class Priorities{
 	static List<Student> student_list = new ArrayList<Student>();
 	List<Student> getStudents(List<String> events){
 		int curr_evnt = 0;
-		while(curr_evnt < events.size()){
+		while(curr_evnt++ < events.size()){
 			//Adding students
 			if(events.get(curr_evnt).contains("ENTER")){
 				//Get name, ID and CGPA by substringing ENTER out and reading the string
@@ -91,7 +91,6 @@ class Priorities{
 					}	
 				}
 			}
-			curr_evnt++;
 		}
 		//Check if list is empty
 		if(student_list.isEmpty()){
@@ -121,7 +120,7 @@ class Priorities{
 			return student_list;
 		}	
 	}
-}
+}	
 /* PRE WRITTEN CODE */
 public class java_priority_queue {
     private final static Scanner scan = new Scanner(System.in);
